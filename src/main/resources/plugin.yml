@@ -1,0 +1,22 @@
+name: clearlag
+version: '1.0'
+main: io.github.Earth1283.clearlag.EntityCleanupPlugin
+api-version: '1.21'
+author: Earth1283
+description: 专门为Eterma服务器设计的防农场插件
+permissions:
+  clearlag.command:
+    description: 允许有这个权限的人运行 /clearlag 指令
+    default: op
+  clearlag.message:
+    description: 接收有关于实体清理的消息
+    default: op
+
+# Commands for the plugin
+# maybe we should add multilanguage support?
+commands:
+  clearlag:
+    description: 手动清理实体
+    usage: /<command>
+    permission: clearlag.command
+    permission-message: 您没有权限运行该指令，如果您觉得这是个bug，请及时联系腐竹

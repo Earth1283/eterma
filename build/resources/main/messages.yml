@@ -1,0 +1,8 @@
+# messages.yml
+cleanup-start: "正在开始清理实体..."
+cleanup-complete: "实体清理完成! 清理了 {removed_count} 个实体."
+cleanup-no-entities: "没有要清理的实体!"
+cleanup-failed: "清理实体时发生错误。"
+cleanup-manual-clear: "手动清理实体完成! 清理了 {removed_count} 个实体."
+cleanup-manual-failed: "手动清理时发生错误。"
+cleanup-command-permission: "你没有权限执行此命令。"

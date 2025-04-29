@@ -1,0 +1,10 @@
+# config.yml
+cleanup-interval: 600 # Time in seconds (interval for cleanup task)
+cleared-entities:
+  - ITEM
+  - EXPERIENCE_ORB
+  - ZOMBIE
+  - CREEPER
+  - SPIDER
+  - ZOMBIFIED_PIGLIN
+  - TNT
