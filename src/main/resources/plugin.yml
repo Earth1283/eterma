@@ -1,5 +1,5 @@
-name: clearlag
-version: '1.0'
+name: Eterma
+version: '1.0.2'
 main: io.github.Earth1283.clearlag.EntityCleanupPlugin
 api-version: '1.21'
 author: Earth1283
@@ -12,6 +12,11 @@ commands:
     usage: /clearlag
     permission: clearlag.command
     permission-message: 你没有权限使用此命令。
+  qq: # Added the new command
+    description: Displays the QQ group number.
+    usage: /qq
+    permission: clearlag.qq # Added a new permission for the qq command
+    permission-message: 你没有权限使用此命令。
 
 # Permissions used by the plugin.
 permissions:
@@ -21,3 +26,6 @@ permissions:
   clearlag.message:
     description: Allows the player to receive entity cleanup notification messages.
     default: op # This permission is granted to OPs by default.
+  clearlag.qq: # Added the new permission
+    description: Allows the player to use the /qq command.
+    default: true # This permission is granted to all players by default.

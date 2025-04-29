@@ -1,19 +1,15 @@
-# Entity Cleanup Plugin Configuration
-
-# The interval in seconds between entity cleanup tasks.
-# Default: 300 seconds (5 minutes)
+# 扫荡间隙，默认为5分钟（300秒）
 cleanup-interval-seconds: 300
 
-# The delay in seconds before the first cleanup task runs after plugin starts.
-# Default: 60 seconds (1 minute)
+# 服务器启动后多久开始运行第一次扫荡
 # @腐竹，如果你想防止农场的话一般15秒就够了
 cleanup-delay-seconds: 60
 
-# List of entity types to clear during cleanup.
-# Use the Bukkit EntityType names (e.g., ZOMBIE, SKELETON, SPIDER, DROPPED_ITEM).
-# Be cautious with entities like PLAYER, ANIMALS, VILLAGER, etc., as clearing them is usually not desired.
-# Personally I don't think paper or spigot will allow this without screwming at you
-# An empty list means no entities will be cleared by the scheduled task.
+# 在清理过程中需要清除的实体类型列表。
+# 使用 Bukkit 的 EntityType 名称（例如 ZOMBIE, SKELETON, SPIDER, DROPPED_ITEM）。
+# 对于像 PLAYER、ANIMALS、VILLAGER 等实体要小心，因为清除它们通常是不希望的。
+# 就个人经验来说，我认为 paper 或 spigot 不会允许这样做
+# 空列表意味着调度任务不会清除任何实体。
 entities-to-clear:
   - ZOMBIE
   - SKELETON
@@ -47,4 +43,13 @@ entities-to-clear:
   - PHANTOM
   - SLIME
   - CAVE_SPIDER
-  # - EXPERIENCE_ORB # Example: Clear experience orbs (use with caution)
+
+# 数实体的异步功能的执行间隙
+# 默认：15秒间隙
+# 虽然这是异步功能，但是如果太频繁还是会拖服务器性能的后腿
+# 尤其是当服务器繁忙时，建议将这个数字改成30～60
+counting-interval-seconds: 15
+
+# 自动清理阈值，将会立即扫荡
+# 顺便重制扫荡倒计时
+max-entities-before-cleanup: 150
