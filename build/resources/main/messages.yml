@@ -1,8 +1,19 @@
-# messages.yml
-cleanup-start: "正在开始清理实体..."
-cleanup-complete: "实体清理完成! 清理了 {removed_count} 个实体."
-cleanup-no-entities: "没有要清理的实体!"
-cleanup-failed: "清理实体时发生错误。"
-cleanup-manual-clear: "手动清理实体完成! 清理了 {removed_count} 个实体."
-cleanup-manual-failed: "手动清理时发生错误。"
-cleanup-command-permission: "你没有权限执行此命令。"
+# Entity Cleanup Plugin Messages (Chinese)
+
+messages:
+  # Message sent to players with 'clearlag.message' permission before entity cleanup starts.
+  pre-cleanup: "&a[清理] &e实体清理即将开始！"
+
+  # Message sent to players with 'clearlag.message' permission after entity cleanup is complete.
+  # Use %count% placeholder to show the number of entities removed.
+  # Maybe you can use this with other plugins with PAPI but god why would anyone need that.
+  post-cleanup: "&a[清理] &e实体清理完成。已移除 &c%count% &e个实体。"
+
+  # Message sent to the command sender when the /clearlag command is used successfully.
+  command-success: "&a[清理] &e手动实体清理已触发。已移除 &c%count% &e个实体。"
+
+  # Message sent to the command sender if they don't have permission to use the command.
+  command-no-permission: "&c你没有权限使用此命令。"
+
+  # Message sent if the command is used incorrectly (e.g., wrong arguments).
+  command-usage: "&c用法: /clearlag"

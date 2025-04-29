@@ -1,10 +1,50 @@
-# config.yml
-cleanup-interval: 600 # Time in seconds (interval for cleanup task)
-cleared-entities:
-  - ITEM
-  - EXPERIENCE_ORB
+# Entity Cleanup Plugin Configuration
+
+# The interval in seconds between entity cleanup tasks.
+# Default: 300 seconds (5 minutes)
+cleanup-interval-seconds: 300
+
+# The delay in seconds before the first cleanup task runs after plugin starts.
+# Default: 60 seconds (1 minute)
+# @腐竹，如果你想防止农场的话一般15秒就够了
+cleanup-delay-seconds: 60
+
+# List of entity types to clear during cleanup.
+# Use the Bukkit EntityType names (e.g., ZOMBIE, SKELETON, SPIDER, DROPPED_ITEM).
+# Be cautious with entities like PLAYER, ANIMALS, VILLAGER, etc., as clearing them is usually not desired.
+# Personally I don't think paper or spigot will allow this without screwming at you
+# An empty list means no entities will be cleared by the scheduled task.
+entities-to-clear:
   - ZOMBIE
-  - CREEPER
+  - SKELETON
   - SPIDER
+  - CREEPER
+  - ENDERMAN
+  - WITCH
+  - HUSK
+  - STRAY
+  - DROWNED
+  - ZOMBIE_VILLAGER
   - ZOMBIFIED_PIGLIN
-  - TNT
+  - SILVERFISH
+  - ENDERMITE
+  - GUARDIAN
+  - ELDER_GUARDIAN
+  - SHULKER
+  - VEX
+  - VINDICATOR
+  - EVOKER
+  - PILLAGER
+  - RAVAGER
+  - HOGLIN
+  - ZOGLIN
+  - GHAST
+  - BLAZE
+  - MAGMA_CUBE
+  - WITHER_SKELETON
+  - WITHER
+  - ENDER_DRAGON
+  - PHANTOM
+  - SLIME
+  - CAVE_SPIDER
+  # - EXPERIENCE_ORB # Example: Clear experience orbs (use with caution)
